@@ -11,16 +11,19 @@ public class PigLatin {
 		while(keepPlaying.equalsIgnoreCase("y")) {
 			String userWord = "";
 			while (userWord.trim().isEmpty()) {
-				System.out.print("Please enter a word to be translated: ");
+				System.out.print("Please enter a word/sentence to be translated: ");
 				userWord = scnr.nextLine();
 			}
 			addSpacing();
 			System.out.println(convertSentenceToWords(userWord));
 			addSpacing();
-			System.out.println("Translate another line? (y/n)");
+			System.out.print("Translate another line? (y/n) ");
 			keepPlaying = scnr.next();
+			//garbage line
+			scnr.nextLine();
 		}
-		System.out.println("Goodbye");
+		addSpacing();
+		System.out.println("Goodbye!");
 		scnr.close();
 	}
 	public static String convertStringToPigLatin(String word) {
